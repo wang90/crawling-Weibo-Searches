@@ -61,9 +61,7 @@ function savefile( texts ) {
     const t2 = texts.map(v => {
         return v.value + ',' +v.blocked;
     }).join('\n');
-
-
-    
+   
     fs.writeFile('微博敏感词汇总.txt', t1,  function(err) {
         if (err) {
             console.log("数据写入失败！");
